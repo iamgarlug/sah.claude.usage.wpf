@@ -15,7 +15,7 @@ public partial class MainWindow : Window
 
     private void OnSettingsClick(object sender, RoutedEventArgs e)
     {
-        var settings = new SettingsWindow { Owner = this };
+        var settings = new SettingsWindow(AppSettings.Load()) { Owner = this };
         settings.ShowDialog();
     }
 }

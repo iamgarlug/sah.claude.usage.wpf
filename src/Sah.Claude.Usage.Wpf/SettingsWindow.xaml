@@ -6,25 +6,31 @@
         mc:Ignorable="d"
         Title="Settings" Height="300" Width="400"
         WindowStartupLocation="CenterOwner"
-        ResizeMode="NoResize">
-    <Grid>
+        ResizeMode="NoResize"
+        Background="{DynamicResource AppBackground}">
+    <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"
-                   Text="Settings"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="18"/>
+        <StackPanel Grid.Row="0" VerticalAlignment="Top">
+            <TextBlock Text="Theme"
+                       Margin="0,0,0,4"
+                       Foreground="{DynamicResource AppForeground}"/>
+            <ComboBox x:Name="ThemeComboBox"
+                      AutomationProperties.AutomationId="ThemeComboBox"
+                      Width="160" HorizontalAlignment="Left"
+                      SelectionChanged="OnThemeSelectionChanged"/>
+        </StackPanel>
 
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"
-                    HorizontalAlignment="Right"
-                    Margin="8">
-            <Button Content="Cancel" Width="75" Margin="0,0,8,0" Click="OnCancelClick"/>
-            <Button Content="Save" Width="75" Click="OnSaveClick"/>
+                    HorizontalAlignment="Right">
+            <Button AutomationProperties.AutomationId="CancelButton"
+                    Content="Cancel" Width="75" Margin="0,0,8,0" Click="OnCancelClick"/>
+            <Button AutomationProperties.AutomationId="SaveButton"
+                    Content="Save" Width="75" Click="OnSaveClick"/>
         </StackPanel>
     </Grid>
 </Window>

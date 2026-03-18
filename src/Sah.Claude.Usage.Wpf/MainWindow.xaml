@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Sah.Claude.Usage.Wpf" Height="450" Width="800">
+        Title="Sah.Claude.Usage.Wpf" Height="450" Width="800"
+        Background="{DynamicResource AppBackground}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -13,20 +14,26 @@
 
         <Border Grid.Row="0"
                 BorderThickness="0,0,0,1"
-                BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+                BorderBrush="{DynamicResource AppBorder}">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="4">
                 <Button x:Name="RefreshButton"
+                        AutomationProperties.AutomationId="RefreshButton"
                         Click="OnRefreshClick"
                         ToolTip="Refresh"
                         Width="32" Height="32" Margin="0,0,4,0"
+                        Padding="0"
                         FontFamily="Segoe MDL2 Assets" FontSize="16"
-                        Content="&#xE72C;"/>
+                        Content="&#xE72C;"
+                        Foreground="{DynamicResource AppForeground}"/>
                 <Button x:Name="SettingsButton"
+                        AutomationProperties.AutomationId="SettingsButton"
                         Click="OnSettingsClick"
                         ToolTip="Settings"
                         Width="32" Height="32"
+                        Padding="0"
                         FontFamily="Segoe MDL2 Assets" FontSize="16"
-                        Content="&#xE713;"/>
+                        Content="&#xE713;"
+                        Foreground="{DynamicResource AppForeground}"/>
             </StackPanel>
         </Border>
 
