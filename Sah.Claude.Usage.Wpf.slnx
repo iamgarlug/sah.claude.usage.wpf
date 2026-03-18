@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Sah.Claude.Usage.Wpf/Sah.Claude.Usage.Wpf.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Sah.Claude.Usage.Wpf.UnitTests/Sah.Claude.Usage.Wpf.UnitTests.csproj" />
+    <Project Path="test/Sah.Claude.Usage.Wpf.IntegrationTests/Sah.Claude.Usage.Wpf.IntegrationTests.csproj" />
+  </Folder>
+</Solution>
